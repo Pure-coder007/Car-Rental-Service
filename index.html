@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Raceline - Your Premier Car Rental Service</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      .modal-wider {
+        max-width: 90%; /* Makes the modal wider, adjust percentage as needed */
+        margin: 30px auto; /* Centers it with some top/bottom margin */
+      }
+      .modal-wider .modal-body {
+        max-height: 70vh; /* Limits height to keep it from getting too tall */
+        overflow-y: auto; /* Adds scroll if content exceeds height */
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Race<span>line</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#about-us" class="nav-link">About</a></li>
+            <!-- <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="car.html" class="nav-link">Cars</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
+            <li class="nav-item"><a href="#contact-us" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/rent.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+          <div class="col-lg-8 ftco-animate">
+            <div class="text w-100 text-center mb-md-5 pb-md-5">
+              <h1 class="mb-4">Fast & Easy Way To Rent A Car</h1>
+              <p style="font-size: 18px;">Book your perfect ride today with our simple and reliable car rental service.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-no-pt bg-light">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-12 featured-top">
+            <div class="row no-gutters">
+              <div class="col-md-4 d-flex align-items-center">
+                <form action="#" class="request-form ftco-animate bg-dark">
+                  <h2>Plan Your Trip</h2>
+                  <div class="form-group">
+                    <label for="" class="label">Pick-up location</label>
+                    <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="label">Drop-off location</label>
+                    <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                  </div>
+                  <div class="d-flex">
+                    <div class="form-group mr-2">
+                      <label for="" class="label">Pick-up date</label>
+                      <input type="text" class="form-control" id="book_pick_date" placeholder="Date">
+                    </div>
+                    <div class="form-group ml-2">
+                      <label for="" class="label">Drop-off date</label>
+                      <input type="text" class="form-control" id="book_off_date" placeholder="Date">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="label">Pick-up time</label>
+                    <input type="text" class="form-control" id="time_pick" placeholder="Time">
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Rent A Car Now" class="btn btn-secondary py-3 px-4">
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-8 d-flex align-items-center">
+                <div class="services-wrap rounded-right w-100">
+                  <h3 class="heading-section mb-4">The Easiest Way to Rent Your Car</h3>
+                  <div class="row d-flex mb-4">
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                      <div class="services w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+                        <div class="text w-100">
+                          <h3 class="heading mb-2">Pick Your Location</h3>
+                        </div>
+                      </div>      
+                    </div>
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                      <div class="services w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-handshake"></span></div>
+                        <div class="text w-100">
+                          <h3 class="heading mb-2">Find the Best Deal</h3>
+                        </div>
+                      </div>      
+                    </div>
+                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                      <div class="services w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-rent"></span></div>
+                        <div class="text w-100">
+                          <h3 class="heading mb-2">Book Your Car</h3>
+                        </div>
+                      </div>      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ftco-section ftco-no-pt bg-light">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+              <span class="subheading">What We Offer</span>
+              <h2 class="mb-2">Featured Vehicles</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="carousel-car owl-carousel">
+                <!-- Car 1 - Toyota Fortuner -->
+                <div class="item">
+                  <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-02.jpeg);"></div>
+                    <div class="text">
+                      <h2 class="mb-0"><a href="#">Toyota Fortuner</a></h2>
+                      <div class="d-flex mb-3">
+                        <span class="cat">Toyota</span>
+                      </div>
+                      <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-secondary py-2 ml-1" data-toggle="modal" data-target="#fortunerModal">Details</a></p>
+                    </div>
+                  </div>
+                </div>
+      
+                <!-- Car 2 - Lexus GX460 -->
+                <div class="item">
+                  <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-2.jpeg);"></div>
+                    <div class="text">
+                      <h2 class="mb-0"><a href="#">Lexus GX460</a></h2>
+                      <div class="d-flex mb-3">
+                        <span class="cat">Lexus</span>
+                      </div>
+                      <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-secondary py-2 ml-1" data-toggle="modal" data-target="#gx460Modal">Details</a></p>
+                    </div>
+                  </div>
+                </div>
+      
+                <!-- Car 3 - Toyota Highlander -->
+                <div class="item">
+                  <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-03.jpeg);"></div>
+                    <div class="text">
+                      <h2 class="mb-0"><a href="#">Toyota Highlander</a></h2>
+                      <div class="d-flex mb-3">
+                        <span class="cat">Toyota</span>
+                      </div>
+                      <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-secondary py-2 ml-1" data-toggle="modal" data-target="#highlanderModal">Details</a></p>
+                    </div>
+                  </div>
+                </div>
+      
+                <!-- Car 4 - Lexus GX470 -->
+                <div class="item">
+                  <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-04.jpeg);"></div>
+                    <div class="text">
+                      <h2 class="mb-0"><a href="#">Lexus GX470</a></h2>
+                      <div class="d-flex mb-3">
+                        <span class="cat">Lexus</span>
+                      </div>
+                      <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-secondary py-2 ml-1" data-toggle="modal" data-target="#gx470Modal">Details</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Modal for Toyota Fortuner -->
+        <div class="modal fade" id="fortunerModal" tabindex="-1" role="dialog" aria-labelledby="fortunerModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-wider" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="fortunerModalLabel">Toyota Fortuner Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="car-details">
+                  <div class="img rounded" style="background-image: url(images/car-02.jpeg);"></div>
+                  <div class="text text-center">
+                    <span class="subheading">Toyota</span>
+                    <h2>Fortuner</h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-dashboard"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Mileage<span>45,000</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-pistons"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Transmission<span>Automatic</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car-seat"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Seats<span>7 Adults</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-diesel"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Fuel<span>Diesel</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 pills">
+                    <div class="bd-example bd-example-tabs">
+                      <div class="d-flex justify-content-center">
+                        <ul class="nav nav-pills mb-3" id="pills-tab-fortuner" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="pills-fortuner-features-tab" data-toggle="pill" href="#pills-fortuner-features" role="tab" aria-controls="pills-fortuner-features" aria-selected="true">Features</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-fortuner-description-tab" data-toggle="pill" href="#pills-fortuner-description" role="tab" aria-controls="pills-fortuner-description" aria-selected="false">Description</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-fortuner-review-tab" data-toggle="pill" href="#pills-fortuner-review" role="tab" aria-controls="pills-fortuner-review" aria-selected="false">Review</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tab-content" id="pills-tabContent-fortuner">
+                        <div class="tab-pane fade show active" id="pills-fortuner-features" role="tabpanel" aria-labelledby="pills-fortuner-features-tab">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <ul class="features">
+                                <li class="check"><span class="ion-ios-checkmark"></span>Air Conditioning</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>GPS</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Bluetooth</li>
+                              </ul>
+                            </div>
+                            <div class="col-md-4">
+                              <ul class="features">
+                                <li class="check"><span class="ion-ios-checkmark"></span>Seat Belts</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Audio Input</li>
+                                <li class="remove"><span class="ion-ios-close"></span>Sleeping Bed</li>
+                              </ul>
+                            </div>
+                            <div class="col-md-4">
+                              <ul class="features">
+                                <li class="check"><span class="ion-ios-checkmark"></span>Long Term Trips</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Climate Control</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Remote Locking</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-fortuner-description" role="tabpanel" aria-labelledby="pills-fortuner-description-tab">
+                          <p>The Toyota Fortuner is a robust and reliable SUV perfect for family trips and off-road adventures. With its powerful diesel engine and spacious interior, it offers both comfort and capability.</p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-fortuner-review" role="tabpanel" aria-labelledby="pills-fortuner-review-tab">
+                          <div class="review d-flex">
+                            <div class="user-img" style="background-image: url(images/111.jpg)"></div>
+                            <div class="desc">
+                              <h4><span class="text-left">Nnamdi James</span><span class="text-right">15 Feb 2025</span></h4>
+                              <p class="star">
+                                <span><i class="ion-ios-star"></i><i class="ion-ios-star"></i><i class="ion-ios-star"></i><i class="ion-ios-star"></i><i class="ion-ios-star"></i></span>
+                              </p>
+                              <p>Great SUV for family trips, very reliable and comfortable!</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Modal for Lexus GX460 -->
+        <div class="modal fade" id="gx460Modal" tabindex="-1" role="dialog" aria-labelledby="gx460ModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-wider" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="gx460ModalLabel">Lexus GX460 Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="car-details">
+                  <div class="img rounded" style="background-image: url(images/car-2.jpeg);"></div>
+                  <div class="text text-center">
+                    <span class="subheading">Lexus</span>
+                    <h2>GX460</h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-dashboard"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Mileage<span>35,000</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-pistons"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Transmission<span>Automatic</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car-seat"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Seats<span>7 Adults</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-diesel"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Fuel<span>Petrol</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 pills">
+                    <div class="bd-example bd-example-tabs">
+                      <div class="d-flex justify-content-center">
+                        <ul class="nav nav-pills mb-3" id="pills-tab-gx460" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="pills-gx460-features-tab" data-toggle="pill" href="#pills-gx460-features" role="tab" aria-controls="pills-gx460-features" aria-selected="true">Features</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-gx460-description-tab" data-toggle="pill" href="#pills-gx460-description" role="tab" aria-controls="pills-gx460-description" aria-selected="false">Description</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-gx460-review-tab" data-toggle="pill" href="#pills-gx460-review" role="tab" aria-controls="pills-gx460-review" aria-selected="false">Review</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tab-content" id="pills-tabContent-gx460">
+                        <div class="tab-pane fade show active" id="pills-gx460-features" role="tabpanel" aria-labelledby="pills-gx460-features-tab">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <ul class="features">
+                                <li class="check"><span class="ion-ios-checkmark"></span>Air Conditioning</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>GPS</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Bluetooth</li>
+                              </ul>
+                            </div>
+                            <div class="col-md-4">
+                              <ul class="features">
+                                <li class="check"><span class="ion-ios-checkmark"></span>Leather Seats</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Sunroof</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Audio Input</li>
+                              </ul>
+                            </div>
+                            <div class="col-md-4">
+                              <ul class="features">
+                                <li class="check"><span class="ion-ios-checkmark"></span>Long Term Trips</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Climate Control</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Remote Locking</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-gx460-description" role="tabpanel" aria-labelledby="pills-gx460-description-tab">
+                          <p>The Lexus GX460 combines luxury with off-road capability, featuring premium materials and advanced technology for a superior driving experience.</p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-gx460-review" role="tabpanel" aria-labelledby="pills-gx460-review-tab">
+                          <div class="review d-flex">
+                            <div class="user-img" style="background-image: url(images/222.jpg)"></div>
+                            <div class="desc">
+                              <h4><span class="text-left">Johnson Anthony</span><span class="text-right">10 March 2025</span></h4>
+                              <p class="star">
+                                <span><i class="ion-ios-star"></i><i class="ion-ios-star"></i><i class="ion-ios-star"></i><i class="ion-ios-star"></i><i class="ion-ios-star"></i></span>
+                              </p>
+                              <p>Luxurious and powerful, perfect for long drives!</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Modal for Toyota Highlander -->
+        <div class="modal fade" id="highlanderModal" tabindex="-1" role="dialog" aria-labelledby="highlanderModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-wider" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="highlanderModalLabel">Toyota Highlander Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="car-details">
+                  <div class="img rounded" style="background-image: url(images/car-03.jpeg);"></div>
+                  <div class="text text-center">
+                    <span class="subheading">Toyota</span>
+                    <h2>Highlander</h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-dashboard"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Mileage<span>30,000</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-pistons"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Transmission<span>Automatic</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car-seat"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Seats<span>8 Adults</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-diesel"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Fuel<span>Petrol</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 pills">
+                    <div class="bd-example bd-example-tabs">
+                      <div class="d-flex justify-content-center">
+                        <ul class="nav nav-pills mb-3" id="pills-tab-highlander" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="pills-highlander-features-tab" data-toggle="pill" href="#pills-highlander-features" role="tab" aria-controls="pills-highlander-features" aria-selected="true">Features</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-highlander-description-tab" data-toggle="pill" href="#pills-highlander-description" role="tab" aria-controls="pills-highlander-description" aria-selected="false">Description</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-highlander-review-tab" data-toggle="pill" href="#pills-highlander-review" role="tab" aria-controls="pills-highlander-review" aria-selected="false">Review</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tab-content" id="pills-tabContent-highlander">
+                        <div class="tab-pane fade show active" id="pills-highlander-features" role="tabpanel" aria-labelledby="pills-highlander-features-tab">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <ul class="features">
+                                <li class="check"><span class="ion-ios-checkmark"></span>Air Conditioning</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>GPS</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Bluetooth</li>
+                              </ul>
+                            </div>
+                            <div class="col-md-4">
+                              <ul class="features">
+                                <li class="check"><span class="ion-ios-checkmark"></span>Seat Belts</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Audio Input</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Third Row Seating</li>
+                              </ul>
+                            </div>
+                            <div class="col-md-4">
+                              <ul class="features">
+                                <li class="check"><span class="ion-ios-checkmark"></span>Long Term Trips</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Climate Control</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Remote Locking</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-highlander-description" role="tabpanel" aria-labelledby="pills-highlander-description-tab">
+                          <p>The Toyota Highlander is a versatile midsize SUV offering ample space for families and a smooth, comfortable ride for all your adventures.</p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-highlander-review" role="tabpanel" aria-labelledby="pills-highlander-review-tab">
+                          <div class="review d-flex">
+                            <div class="user-img" style="background-image: url(images/333.jpeg)"></div>
+                            <div class="desc">
+                              <h4><span class="text-left">Mrs Ogunwale</span><span class="text-right">5 March 2025</span></h4>
+                              <p class="star">
+                                <span><i class="ion-ios-star"></i><i class="ion-ios-star"></i><i class="ion-ios-star"></i><i class="ion-ios-star"></i><i class="ion-ios-star"></i></span>
+                              </p>
+                              <p>Spacious and reliable, great for family vacations!</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Modal for Lexus GX470 -->
+        <div class="modal fade" id="gx470Modal" tabindex="-1" role="dialog" aria-labelledby="gx470ModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-wider" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="gx470ModalLabel">Lexus GX470 Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="car-details">
+                  <div class="img rounded" style="background-image: url(images/car-04.jpeg);"></div>
+                  <div class="text text-center">
+                    <span class="subheading">Lexus</span>
+                    <h2>GX470</h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-dashboard"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Mileage<span>40,000</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-pistons"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Transmission<span>Automatic</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car-seat"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Seats<span>7 Adults</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services">
+                      <div class="media-body py-md-4">
+                        <div class="d-flex mb-3 align-items-center">
+                          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-diesel"></span></div>
+                          <div class="text">
+                            <h3 class="heading mb-0 pl-3">Fuel<span>Petrol</span></h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 pills">
+                    <div class="bd-example bd-example-tabs">
+                      <div class="d-flex justify-content-center">
+                        <ul class="nav nav-pills mb-3" id="pills-tab-gx470" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="pills-gx470-features-tab" data-toggle="pill" href="#pills-gx470-features" role="tab" aria-controls="pills-gx470-features" aria-selected="true">Features</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-gx470-description-tab" data-toggle="pill" href="#pills-gx470-description" role="tab" aria-controls="pills-gx470-description" aria-selected="false">Description</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-gx470-review-tab" data-toggle="pill" href="#pills-gx470-review" role="tab" aria-controls="pills-gx470-review" aria-selected="false">Review</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tab-content" id="pills-tabContent-gx470">
+                        <div class="tab-pane fade show active" id="pills-gx470-features" role="tabpanel" aria-labelledby="pills-gx470-features-tab">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <ul class="features">
+                                <li class="check"><span class="ion-ios-checkmark"></span>Air Conditioning</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>GPS</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Bluetooth</li>
+                              </ul>
+                            </div>
+                            <div class="col-md-4">
+                              <ul class="features">
+                                <li class="check"><span class="ion-ios-checkmark"></span>Leather Seats</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Audio Input</li>
+                                <li class="remove"><span class="ion-ios-close"></span>Sunroof</li>
+                              </ul>
+                            </div>
+                            <div class="col-md-4">
+                              <ul class="features">
+                                <li class="check"><span class="ion-ios-checkmark"></span>Long Term Trips</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Climate Control</li>
+                                <li class="check"><span class="ion-ios-checkmark"></span>Remote Locking</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-gx470-description" role="tabpanel" aria-labelledby="pills-gx470-description-tab">
+                          <p>The Lexus GX470 offers a blend of luxury and rugged performance, ideal for those seeking comfort on and off the road.</p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-gx470-review" role="tabpanel" aria-labelledby="pills-gx470-review-tab">
+                          <div class="review d-flex">
+                            <div class="user-img" style="background-image: url(images/111.jpg)"></div>
+                            <div class="desc">
+                              <h4><span class="text-left">Nnamdi James</span><span class="text-right">20 Feb 2025</span></h4>
+                              <p class="star">
+                                <span><i class="ion-ios-star"></i><i class="ion-ios-star"></i><i class="ion-ios-star"></i><i class="ion-ios-star"></i><i class="ion-ios-star"></i></span>
+                              </p>
+                              <p>Smooth ride and great off-road capability!</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="ftco-section ftco-about" id="about-us">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/new_img.jpg);"></div>
+          <div class="col-md-6 wrap-about ftco-animate">
+            <div class="heading-section heading-section-white pl-md-5">
+              <span class="subheading">About Us</span>
+              <h2 class="mb-4">Welcome to Raceline</h2>
+              <p>We are a trusted car rental service dedicated to providing you with reliable, affordable, and high-quality vehicles for every journey.</p>
+              <p>With years of experience, we offer a seamless booking process and a wide range of cars to suit your needs, from business trips to family vacations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <span class="subheading">Services</span>
+            <h2 class="mb-3">Our Latest Services</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="services services-2 w-100 text-center">
+              <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-wedding-car"></span></div>
+              <div class="text w-100">
+                <h3 class="heading mb-2">Wedding Rentals</h3>
+                <p>Make your special day unforgettable with our premium wedding car rentals.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="services services-2 w-100 text-center">
+              <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-transportation"></span></div>
+              <div class="text w-100">
+                <h3 class="heading mb-2">City Transfer</h3>
+                <p>Reliable and comfortable transportation within the city for any occasion.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="services services-2 w-100 text-center">
+              <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car"></span></div>
+              <div class="text w-100">
+                <h3 class="heading mb-2">Airport Transfer</h3>
+                <p>Hassle-free airport pick-up and drop-off services tailored to your schedule.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="services services-2 w-100 text-center">
+              <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-transportation"></span></div>
+              <div class="text w-100">
+                <h3 class="heading mb-2">City Tours</h3>
+                <p>Explore the city at your own pace with our flexible rental options.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <span class="subheading">Testimonials</span>
+            <h2 class="mb-3">Happy Clients</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url(images/111.jpg)"></div>
+                  <div class="text pt-4">
+                    <p class="mb-4">"Raceline made renting a car so easy and stress-free. Highly recommend!"</p>
+                    <p class="name">Nnamdi James</p>
+                    <span class="position">Marketing Manager</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url(images/222.jpg)"></div>
+                  <div class="text pt-4">
+                    <p class="mb-4">"Great service and an amazing selection of vehicles!"</p>
+                    <p class="name">Johnson Anthony</p>
+                    <span class="position">Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url(images/333.jpeg)"></div>
+                  <div class="text pt-4">
+                    <p class="mb-4">"The best car rental experience I’ve ever had."</p>
+                    <p class="name">Mrs Ogunwale</p>
+                    <span class="position">Entrepreneur</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-counter ftco-section img bg-light" id="section-counter">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="10">0</strong> <h1 style="color:rgb(88, 86, 86); font-weight: bolder;">+</h1>
+                <span>Years of <br>Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="453">0</strong> <h1 style="color:rgb(88, 86, 86); font-weight: bolder;">+</h1>
+                <span>Total <br>Cars</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="8567">0</strong> <h1 style="color:rgb(88, 86, 86); font-weight: bolder;">+</h1>
+                <span>Happy <br>Customers</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="25">0</strong> <h1 style="color:rgb(88, 86, 86); font-weight: bolder;">+</h1>
+                <span>Total <br>Locations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>	
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section" id="contact-us">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2"><a href="#" class="logo">Race<span>line</span></a></h2>
+              <p>Your trusted partner for car rentals, offering convenience and quality since 2015.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://www.tiktok.com/@racelinerides"><span class="fa-brands fa-tiktok"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/share/18jScdmfaY"><span class="fa-brands fa-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/racelinerides/"><span class="fa-brands fa-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://wa.me/2349090852307?text=I%20want%20to%20book%20for%20a%20car"><span class="fa-brands fa-whatsapp"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Question?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">Plot 22 Idowu Taylor Street, Victoria Island, Lagos.</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+234 909 085 2307</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@raceline.ng</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>
